@@ -1,7 +1,7 @@
 #自定义变量
-MAKE	= mingw32-make
 CC		= g++
 AR		= ar
+MAKE	= make
 #静态库编译选项，-Wall生成所有警告、-O0不优化、-std=c++11采用c++11标准、-g输出调试信息、-c只编译汇编不链接
 CAFLAGS	= -Wall -O0 -std=c++11 -g -c
 #动态库编译选项，-fPIC(Position Independent Code)、-shared生成共享目标文件

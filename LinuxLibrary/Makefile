@@ -1,5 +1,4 @@
 #自定义变量
-MAKE	= mingw32-make
 CC		= g++
 MAKE	= make
 #静态链接选项，-g生成调试信息、-I指定头文件搜索路径，-L指定库文件搜索路径、-l静态库名、-static不共享
@@ -27,7 +26,7 @@ default:
 #模式匹配,冒号前者为目标项，冒号后面为依赖项
 testa: $(LIBA) $(SRCIMP)
 	$(CC) $(SRCIMP) $(LDAFLAG) -o $@
-
+#如果执行报错，提示找不到动态库，需要添加环境变量export LD_LIBRARY_PATH=`pwd`/lib
 testso: $(LIBSO) $(SRCIMP)
 	$(CC) $(SRCIMP) $(LDSOFLAG) -o $@
 
